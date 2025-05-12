@@ -1,0 +1,136 @@
+.cart-section {
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeUp 0.6s ease;
+}
+
+.cart-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.empty-message {
+  font-size: 18px;
+  color: #777;
+}
+
+.cart-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cart-card {
+  display: flex;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 500px;
+}
+
+.cart-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.cart-img {
+  width: 140px;
+  object-fit: cover;
+}
+
+.cart-info {
+  padding: 15px;
+  flex: 1;
+}
+
+.cart-info h4 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #222;
+}
+
+.cart-info p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.price {
+  font-weight: bold;
+  color: #ff3f6c;
+  margin-bottom: 10px;
+}
+
+.buy-btn {
+  padding: 8px 15px;
+  background-color: #ff3f6c;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.buy-btn:hover {
+  background-color: #e73158;
+}
+
+.cart-summary {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.checkout-btn {
+  padding: 10px 25px;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #444;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeUp 0.5s ease forwards;
+}
+
+
+.purchased-section {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 2px dashed #ccc;
+}
+
+.purchased-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #2e7d32;
+}
+
+.purchased .purchased-btn {
+  background-color: #4caf50;
+  color: white;
+  cursor: default;
+  opacity: 0.9;
+}

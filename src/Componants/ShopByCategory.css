@@ -1,0 +1,86 @@
+.shop-category {
+    padding: 2rem;
+    background-color: #fff;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #1c1c1c;
+    margin-bottom: 2rem;
+  }
+  
+  .category-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+  }
+  
+  .category-card {
+    position: relative;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+  }
+  
+  .category-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  
+  .category-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .category-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(255, 94, 58, 0.95), rgba(255, 94, 58, 0.1));
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    transition: background 0.3s ease;
+  }
+  
+  .overlay h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .overlay p {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .overlay button {
+    background: #fff;
+    color: #ff3e00;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .overlay button:hover {
+    background: #ff3e00;
+    color: #fff;
+  }
+  

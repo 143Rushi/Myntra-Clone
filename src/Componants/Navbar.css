@@ -1,0 +1,250 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  font-family: 'Segoe UI', sans-serif;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Logo */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  width: 50px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo img:hover {
+  transform: rotate(-10deg) scale(1.05);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+/* Nav Links */
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  flex-wrap: nowrap;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #333;
+  position: relative;
+  padding: 5px;
+  transition: color 0.3s;
+}
+
+.navbar-links li a::after {
+  content: '';
+  height: 2px;
+  width: 0%;
+  background-color: #ff3f6c;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-links li a:hover::after {
+  width: 100%;
+}
+
+.navbar-links li a:hover {
+  color: #ff3f6c;
+}
+
+/* Search Bar */
+.navbar-search {
+  flex: 1;
+  margin: 0 15px;
+  max-width: 320px;
+}
+
+.navbar-search input {
+  padding: 7px 15px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.navbar-search input:focus {
+  outline: none;
+  border-color: #ff3f6c;
+  box-shadow: 0 0 5px rgba(255, 63, 108, 0.4);
+}
+
+/* Icons */
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-left: 10px;
+}
+
+.navbar-icons a {
+  font-size: 20px;
+  position: relative;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar-icons a:hover {
+  transform: scale(1.2);
+  color: #ff3f6c;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+/* Badges */
+.cart-badge,
+.wishlist-badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: #ff3f6c;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+/* Wishlist Notification */
+.wishlist-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.wishlist-toast-icon {
+  position: absolute;
+  top: -20px;
+  right: -16px;
+  background-color: #e91e63;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-size: 0.6rem;
+  animation: popFade 2s ease;
+  pointer-events: none;
+}
+
+@keyframes popFade {
+  0%   { opacity: 0; transform: translateY(-10px); }
+  20%  { opacity: 1; transform: translateY(0); }
+  80%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .navbar-logo img {
+    width: 40px;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .navbar-search {
+    flex: 1;
+    max-width: none;
+    margin: 0 10px;
+  }
+
+  .navbar-search input {
+    width: 70%;
+    margin-left: 10%;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+
+  .navbar-links {
+    display: none; /* hidden, toggled by hamburger */
+  }
+
+  .navbar-links.active {
+    display: flex;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px 0;
+    z-index: 1001;
+  }
+
+  .navbar-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+  }
+
+  .cart-badge,
+  .wishlist-badge {
+    font-size: 0.65rem;
+    padding: 1px 5px;
+    top: -4px;
+    right: -8px;
+  }
+
+  .wishlist-toast-icon {
+    font-size: 0.55rem;
+    padding: 2px 4px;
+    top: -18px;
+    right: -12px;
+  }
+}
+
+@media screen and (max-width : 320px){
+  .navbar-search input{
+    display: none;
+  }
+}
